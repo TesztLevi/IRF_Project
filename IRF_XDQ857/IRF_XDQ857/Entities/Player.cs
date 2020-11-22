@@ -8,6 +8,8 @@ namespace IRF_XDQ857.Entities
 {
     class Player
     {
+        //public Guid ID { get; set; } = Guid.NewGuid();
+        
         public string name { get; set; }
         public int attack { get; set; }
         public int defense { get; set; }
