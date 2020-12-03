@@ -16,8 +16,8 @@ namespace IRF_XDQ857.Entities
 
         public Player P1;
         public Player P2;
-        //public Player P3;
-        //public Player P4;
-        //public Player P5;
+        public Player P3;
+        public Player P4;
+        public Player P5;
     }
 }

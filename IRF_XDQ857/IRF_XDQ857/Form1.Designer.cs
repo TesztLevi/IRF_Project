@@ -46,7 +46,7 @@
             this.toolStripButton2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1109, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1437, 34);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -72,19 +72,19 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(511, 535);
+            this.panel1.Size = new System.Drawing.Size(750, 750);
             this.panel1.TabIndex = 8;
             // 
             // panel2
             // 
-            this.panel2.Location = new System.Drawing.Point(529, 40);
+            this.panel2.Location = new System.Drawing.Point(768, 37);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(508, 532);
+            this.panel2.Size = new System.Drawing.Size(750, 750);
             this.panel2.TabIndex = 0;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(42, 597);
+            this.button1.Location = new System.Drawing.Point(15, 772);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(121, 58);
             this.button1.TabIndex = 9;
@@ -96,7 +96,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1109, 674);
+            this.ClientSize = new System.Drawing.Size(1437, 820);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
