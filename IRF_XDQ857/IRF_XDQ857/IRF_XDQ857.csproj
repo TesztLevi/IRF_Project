@@ -46,27 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Entities\Market.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Entities\Market.Designer.cs">
+      <DependentUpon>Market.cs</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Player.cs" />
-    <Compile Include="Entities\Team.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreGame_UC.cs">
+    <Compile Include="Entities\Team_UC.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="PreGame_UC.Designer.cs">
-      <DependentUpon>PreGame_UC.cs</DependentUpon>
+    <Compile Include="Entities\Team_UC.Designer.cs">
+      <DependentUpon>Team_UC.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Entities\Market.resx">
+      <DependentUpon>Market.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreGame_UC.resx">
-      <DependentUpon>PreGame_UC.cs</DependentUpon>
+    <EmbeddedResource Include="Entities\Team_UC.resx">
+      <DependentUpon>Team_UC.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

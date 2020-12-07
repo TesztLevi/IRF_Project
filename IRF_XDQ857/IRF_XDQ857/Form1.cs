@@ -14,8 +14,10 @@ namespace IRF_XDQ857
 {
     public partial class Form1 : Form
     {
-        PreGame_UC Team1 = new PreGame_UC();
-        PreGame_UC Team2 = new PreGame_UC();
+        Team_UC Team1 = new Team_UC();
+        Team_UC Team2 = new Team_UC();
+
+        BindingList<Team_UC> teams = new BindingList<Team_UC>();
 
         public Form1()
         {
@@ -32,21 +34,29 @@ namespace IRF_XDQ857
             panel1.Controls.Add(Team1);
             Team1.Dock = DockStyle.Fill;
             
-            
-
-
-            panel2.Controls.Clear();
-            
-            panel2.Controls.Add(Team2);
-            Team2.Dock = DockStyle.Fill;
-
-
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(Team1.tam.ToString());
-            button1.Text = "Visszavágó";
+
+            panel1.Controls.Clear();
+
+            panel1.Controls.Add(Team2);
+            Team2.Dock = DockStyle.Fill;
+            button1.Visible = false;
+            button2.Visible = true;
+        }
+
+        private void ToolStripButton3_Click(object sender, EventArgs e)
+        {
+            Market market = new Market();
+            panel1.Controls.Clear();
+            panel1.Controls.Add(market);
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
         }
     }
 }

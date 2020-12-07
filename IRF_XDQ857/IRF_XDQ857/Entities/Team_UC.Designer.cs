@@ -1,6 +1,6 @@
 ﻿namespace IRF_XDQ857
 {
-    partial class PreGame_UC
+    partial class Team_UC
     {
         /// <summary> 
         /// Required designer variable.
@@ -55,7 +55,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(280, 530);
+            this.button3.Location = new System.Drawing.Point(18, 472);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(145, 58);
             this.button3.TabIndex = 27;
@@ -118,9 +118,9 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(153, 36);
+            this.textBox1.Location = new System.Drawing.Point(116, 36);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 26);
+            this.textBox1.Size = new System.Drawing.Size(207, 26);
             this.textBox1.TabIndex = 20;
             // 
             // label7
@@ -144,7 +144,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(74, 36);
+            this.label1.Location = new System.Drawing.Point(43, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 20);
             this.label1.TabIndex = 17;
@@ -258,7 +258,7 @@
             this.label4.TabIndex = 36;
             this.label4.Text = "Csatár";
             // 
-            // PreGame_UC
+            // Team_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -285,8 +285,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label1);
-            this.Name = "PreGame_UC";
-            this.Size = new System.Drawing.Size(750, 750);
+            this.Name = "Team_UC";
+            this.Size = new System.Drawing.Size(750, 555);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -13,21 +13,39 @@ using System.Xml;
 namespace IRF_XDQ857
 {
 
-    
-    public partial class PreGame_UC : UserControl
+
+    public partial class Team_UC : UserControl
     {
         BindingList<Player> players = new BindingList<Player>();
-        BindingList<Team> teams = new BindingList<Team>();
-        public int tam { get; set; }
+
+        public string name { get; set; }
+        public int attack { get; set; }
+        public int defense { get; set; }
+        public int physical { get; set; }
+        public int value { get; set; }
+
+        internal Player P1 { get; set; }
+        internal Player P2 { get; set; }
+        internal Player P3 { get; set; }
+        internal Player P4 { get; set; }
+        internal Player P5 { get; set; }
 
 
 
-        public PreGame_UC()
+
+
+
+
+
+
+
+
+        public Team_UC()
         {
             InitializeComponent();
             xmlLoad();
 
-            
+
 
 
             comboBox_P1.DataSource = players.ToList();
@@ -81,14 +99,14 @@ namespace IRF_XDQ857
 
 
             comboBox_P1.DataSource = (from p in players
-                                        where p.name.StartsWith(textBox_P1.Text)
-                                        select p).ToList();
+                                      where p.name.StartsWith(textBox_P1.Text)
+                                      select p).ToList();
         }
 
         private void Button_P1_Click(object sender, EventArgs e)
         {
             comboBox_P1.Enabled = false;
-            
+
             textBox_P1.Visible = false;
             textBox_P2.Visible = true;
         }
@@ -170,52 +188,44 @@ namespace IRF_XDQ857
             comboBox_P5.Enabled = false;
 
             textBox_P5.Visible = false;
-            
+
         }
 
 
 
         public void Button3_Click_1(object sender, EventArgs e)
         {
-            //player 1
             Player p1 = (Player)comboBox_P1.SelectedItem;
-
-            //var name1 = from n in players
-             //         where n.name == t1p1.name
-               //         select n.name;
-
-            //var att1 = from p1a in players
-              //         where p1a.attack == t1p1.attack
-                //       select p1a.attack;
-
             Player p2 = (Player)comboBox_P2.SelectedItem;
             Player p3 = (Player)comboBox_P3.SelectedItem;
             Player p4 = (Player)comboBox_P4.SelectedItem;
             Player p5 = (Player)comboBox_P5.SelectedItem;
 
-
-
-            Team t = new Team();
-
-            t.P1 = p1;
-            t.P2 = p2;
-            t.P3 = p3;
-            t.P4 = p4;
-            t.P5 = p5;
-            t.name = textBox1.Text;
-            t.attack = p1.attack + p2.attack + p3.attack + p4.attack + p5.attack;
-            t.defense = p1.defense + p2.defense + p3.defense + p4.defense + p5.defense;
-            t.physical = p1.physical + p2.physical + p3.physical + p4.physical + p5.physical;
+            P1 = p1;
+            P2 = p2;
+            P3 = p3;
+            P4 = p4;
+            P5 = p5;
 
 
 
-            tam = (t.attack * 2);
-            teams.Add(t);
 
-            MessageBox.Show("Csapatod neve:" + t.name + " Attack: " + t.attack.ToString() + " Defense:" + t.defense.ToString()); ; ; 
+
+
+            name = textBox1.Text;
+            attack = p1.attack + p2.attack + p3.attack + p4.attack + p5.attack;
+            defense = p1.defense + p2.defense + p3.defense + p4.defense + p5.defense;
+            physical = p1.physical + p2.physical + p3.physical + p4.physical + p5.physical;
+
+
+
+
+
+
+            MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString());
         }
 
-        
+
     }
 }
 
