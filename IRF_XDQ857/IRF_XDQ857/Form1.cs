@@ -57,6 +57,17 @@ namespace IRF_XDQ857
         private void Button2_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+            Random r = new Random();
+            // Match match = new Match();
+            //match.team1 = Team1;
+            //match.team2 = Team2;
+            decimal pont = (Team1.attack * (Team1.attack - r.Next(-10,10))/(Team2.defense-r.Next(-10,10)));
+            MessageBox.Show(pont.ToString());
+            //MessageBox.Show(Team1.physical.ToString());
+            
+            
         }
+
+        
     }
 }

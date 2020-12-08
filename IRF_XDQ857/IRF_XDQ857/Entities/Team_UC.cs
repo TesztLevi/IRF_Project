@@ -21,7 +21,8 @@ namespace IRF_XDQ857
         public string name { get; set; }
         public int attack { get; set; }
         public int defense { get; set; }
-        public int physical { get; set; }
+
+        public int physical; //{ get; set; }
         public int value { get; set; }
 
         internal Player P1 { get; set; }
@@ -213,16 +214,16 @@ namespace IRF_XDQ857
 
 
             name = textBox1.Text;
-            attack = p1.attack + p2.attack + p3.attack + p4.attack + p5.attack;
-            defense = p1.defense + p2.defense + p3.defense + p4.defense + p5.defense;
-            physical = p1.physical + p2.physical + p3.physical + p4.physical + p5.physical;
+            attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack)/5;
+            defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense)/5;
+            physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical)/5;
 
 
 
 
 
 
-            MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString());
+            MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString() + physical.ToString());
         }
 
 

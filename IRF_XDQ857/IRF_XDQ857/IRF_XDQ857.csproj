@@ -52,6 +52,7 @@
     <Compile Include="Entities\Market.Designer.cs">
       <DependentUpon>Market.cs</DependentUpon>
     </Compile>
+    <Compile Include="Entities\Match.cs" />
     <Compile Include="Entities\Player.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
