@@ -64,6 +64,8 @@ namespace IRF_XDQ857
             match.team1 = Team1;
             match.team2 = Team2;
             match.HForm = 15 - Team1.physical / 10;
+            match.H_name = Team1.name;
+            match.A_name = Team2.name;
 
             
             

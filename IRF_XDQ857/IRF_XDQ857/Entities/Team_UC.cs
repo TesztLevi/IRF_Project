@@ -45,10 +45,6 @@ namespace IRF_XDQ857
         {
             InitializeComponent();
             xmlLoad();
-
-
-
-
             comboBox_P1.DataSource = players.ToList();
             comboBox_P1.DisplayMember = "name";
             comboBox_P2.DataSource = players.ToList();
@@ -59,6 +55,9 @@ namespace IRF_XDQ857
             comboBox_P4.DisplayMember = "name";
             comboBox_P5.DataSource = players.ToList();
             comboBox_P5.DisplayMember = "name";
+
+
+            
 
         }
 
@@ -110,6 +109,7 @@ namespace IRF_XDQ857
 
             textBox_P1.Visible = false;
             textBox_P2.Visible = true;
+            button_P1.Enabled = false;
         }
 
         private void TextBox_P2_TextChanged(object sender, EventArgs e)
@@ -130,6 +130,7 @@ namespace IRF_XDQ857
 
             textBox_P2.Visible = false;
             textBox_P3.Visible = true;
+            button_P2.Enabled = false;
         }
 
         private void TextBox_P3_TextChanged(object sender, EventArgs e)
@@ -150,6 +151,7 @@ namespace IRF_XDQ857
 
             textBox_P3.Visible = false;
             textBox_P4.Visible = true;
+            button_P3.Enabled = false;
         }
 
         private void TextBox_P4_TextChanged(object sender, EventArgs e)
@@ -170,6 +172,7 @@ namespace IRF_XDQ857
 
             textBox_P4.Visible = false;
             textBox_P5.Visible = true;
+            button_P4.Enabled = false;
         }
 
         private void TextBox_P5_TextChanged(object sender, EventArgs e)
@@ -189,44 +192,78 @@ namespace IRF_XDQ857
             comboBox_P5.Enabled = false;
 
             textBox_P5.Visible = false;
+            button_P5.Enabled = false;
+
+            button_unsign.Visible = true;
 
         }
 
 
 
-        public void Button3_Click_1(object sender, EventArgs e)
+        public void Button_ready_Click_1(object sender, EventArgs e)
         {
-            Player p1 = (Player)comboBox_P1.SelectedItem;
-            Player p2 = (Player)comboBox_P2.SelectedItem;
-            Player p3 = (Player)comboBox_P3.SelectedItem;
-            Player p4 = (Player)comboBox_P4.SelectedItem;
-            Player p5 = (Player)comboBox_P5.SelectedItem;
+            if (textBox_T_name.TextLength > 3)
+            {
+                textBox_T_name.Enabled = false;
 
-            P1 = p1;
-            P2 = p2;
-            P3 = p3;
-            P4 = p4;
-            P5 = p5;
+                Player p1 = (Player)comboBox_P1.SelectedItem;
+                Player p2 = (Player)comboBox_P2.SelectedItem;
+                Player p3 = (Player)comboBox_P3.SelectedItem;
+                Player p4 = (Player)comboBox_P4.SelectedItem;
+                Player p5 = (Player)comboBox_P5.SelectedItem;
 
+                P1 = p1;
+                P2 = p2;
+                P3 = p3;
+                P4 = p4;
+                P5 = p5;
 
+                name = textBox_T_name.Text;
+                attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack) / 5;
+                defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense) / 5;
+                physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical) / 5;
+                MessageBox.Show("Gratulálunk, készen van a csapatod!");
+                button_ready.Enabled = false;
 
-
-
-
-            name = textBox1.Text;
-            attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack)/5;
-            defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense)/5;
-            physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical)/5;
-
-
-
-
-
-
-            MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString() + physical.ToString());
+            }
+            else
+            {
+                MessageBox.Show("Kérlek add meg a Csapatod nevét is!");
+            }
+            
+            //MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString() + physical.ToString());
         }
 
+        private void Button_ready_MouseHover(object sender, EventArgs e)
+        {
+            label_hint.Visible = true;
+        }
 
+        private void Button_ready_MouseLeave(object sender, EventArgs e)
+        {
+            label_hint.Visible = false;
+        }
+
+        private void Button_unsign_Click(object sender, EventArgs e)
+        {
+            comboBox_P1.Enabled = true;
+            comboBox_P2.Enabled = true;
+            comboBox_P3.Enabled = true;
+            comboBox_P4.Enabled = true;
+            comboBox_P5.Enabled = true;
+
+
+
+
+
+            textBox_P1.Visible = true;
+            
+            button_P1.Enabled = true;
+            button_P2.Enabled = true;
+            button_P3.Enabled = true;
+            button_P4.Enabled = true;
+            button_P5.Enabled = true;
+        }
     }
 }
 

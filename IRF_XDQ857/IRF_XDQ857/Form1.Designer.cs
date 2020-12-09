@@ -51,7 +51,7 @@
             this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1437, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1437, 38);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -70,7 +70,7 @@
             this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
             this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(104, 29);
+            this.toolStripButton2.Size = new System.Drawing.Size(104, 33);
             this.toolStripButton2.Text = "Visszavágó";
             // 
             // toolStripButton3
@@ -104,14 +104,14 @@
             // 
             this.panel1.Location = new System.Drawing.Point(12, 37);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 633);
+            this.panel1.Size = new System.Drawing.Size(750, 500);
             this.panel1.TabIndex = 8;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 691);
+            this.button1.Location = new System.Drawing.Point(779, 37);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(269, 58);
+            this.button1.Size = new System.Drawing.Size(198, 58);
             this.button1.TabIndex = 9;
             this.button1.Text = "Ellenfél csapat összeállítása";
             this.button1.UseVisualStyleBackColor = true;
@@ -119,9 +119,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 691);
+            this.button2.Location = new System.Drawing.Point(779, 37);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(269, 58);
+            this.button2.Size = new System.Drawing.Size(198, 58);
             this.button2.TabIndex = 10;
             this.button2.Text = "Mehet a meccs!";
             this.button2.UseVisualStyleBackColor = true;

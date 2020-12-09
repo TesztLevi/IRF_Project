@@ -33,6 +33,9 @@ namespace IRF_XDQ857.Entities
         public int A3;
         public int A4;
 
+        public string H_name;
+        public string A_name;
+
 
 
 
@@ -40,7 +43,9 @@ namespace IRF_XDQ857.Entities
         public Match_UC()
         {
             InitializeComponent();
-            
+            label_H_name.Text = H_name;
+            label_A_name.Text = A_name;
+
            
         }
 
@@ -91,6 +96,11 @@ namespace IRF_XDQ857.Entities
             label7.Text = HQ.ToString();
             label8.Text = AQ.ToString();
             MessageBox.Show(H4.ToString()+" - " + A4.ToString());
+        }
+
+        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
