@@ -53,6 +53,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.button_unsign = new System.Windows.Forms.Button();
             this.label_hint = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // button_ready
@@ -91,7 +92,6 @@
             this.textBox_P2.Name = "textBox_P2";
             this.textBox_P2.Size = new System.Drawing.Size(207, 26);
             this.textBox_P2.TabIndex = 24;
-            this.textBox_P2.Visible = false;
             this.textBox_P2.TextChanged += new System.EventHandler(this.TextBox_P2_TextChanged);
             // 
             // button_P1
@@ -178,7 +178,6 @@
             this.textBox_P3.Name = "textBox_P3";
             this.textBox_P3.Size = new System.Drawing.Size(207, 26);
             this.textBox_P3.TabIndex = 29;
-            this.textBox_P3.Visible = false;
             this.textBox_P3.TextChanged += new System.EventHandler(this.TextBox_P3_TextChanged);
             // 
             // label2
@@ -214,7 +213,6 @@
             this.textBox_P4.Name = "textBox_P4";
             this.textBox_P4.Size = new System.Drawing.Size(207, 26);
             this.textBox_P4.TabIndex = 33;
-            this.textBox_P4.Visible = false;
             this.textBox_P4.TextChanged += new System.EventHandler(this.TextBox_P4_TextChanged);
             // 
             // label3
@@ -250,7 +248,6 @@
             this.textBox_P5.Name = "textBox_P5";
             this.textBox_P5.Size = new System.Drawing.Size(207, 26);
             this.textBox_P5.TabIndex = 37;
-            this.textBox_P5.Visible = false;
             this.textBox_P5.TextChanged += new System.EventHandler(this.TextBox_P5_TextChanged);
             // 
             // label4
@@ -283,10 +280,21 @@
             this.label_hint.Text = "Vigyázz, ha ezt lenyomod nincs visszaút!";
             this.label_hint.Visible = false;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(586, 275);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 42;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
+            // 
             // Team_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.label_hint);
             this.Controls.Add(this.button_unsign);
             this.Controls.Add(this.button_P5);
@@ -346,5 +354,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button_unsign;
         private System.Windows.Forms.Label label_hint;
+        private System.Windows.Forms.Button button1;
     }
 }

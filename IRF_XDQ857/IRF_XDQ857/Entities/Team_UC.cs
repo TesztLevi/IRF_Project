@@ -18,6 +18,8 @@ namespace IRF_XDQ857
     {
         BindingList<Player> players = new BindingList<Player>();
 
+        public bool ready { get; set; }
+
         public string name { get; set; }
         public int attack { get; set; }
         public int defense { get; set; }
@@ -56,7 +58,7 @@ namespace IRF_XDQ857
             comboBox_P5.DataSource = players.ToList();
             comboBox_P5.DisplayMember = "name";
 
-
+            ready = false;
             
 
         }
@@ -108,7 +110,7 @@ namespace IRF_XDQ857
             comboBox_P1.Enabled = false;
 
             textBox_P1.Visible = false;
-            textBox_P2.Visible = true;
+            
             button_P1.Enabled = false;
         }
 
@@ -129,7 +131,7 @@ namespace IRF_XDQ857
             comboBox_P2.Enabled = false;
 
             textBox_P2.Visible = false;
-            textBox_P3.Visible = true;
+            
             button_P2.Enabled = false;
         }
 
@@ -150,7 +152,7 @@ namespace IRF_XDQ857
             comboBox_P3.Enabled = false;
 
             textBox_P3.Visible = false;
-            textBox_P4.Visible = true;
+            
             button_P3.Enabled = false;
         }
 
@@ -171,7 +173,7 @@ namespace IRF_XDQ857
             comboBox_P4.Enabled = false;
 
             textBox_P4.Visible = false;
-            textBox_P5.Visible = true;
+            
             button_P4.Enabled = false;
         }
 
@@ -222,9 +224,9 @@ namespace IRF_XDQ857
                 attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack) / 5;
                 defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense) / 5;
                 physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical) / 5;
-                MessageBox.Show("Gratulálunk, készen van a csapatod!");
+                MessageBox.Show("Gratulálunk, készen van a csapatod!"+ready);
                 button_ready.Enabled = false;
-
+                ready = true;
             }
             else
             {
@@ -242,6 +244,7 @@ namespace IRF_XDQ857
         private void Button_ready_MouseLeave(object sender, EventArgs e)
         {
             label_hint.Visible = false;
+            
         }
 
         private void Button_unsign_Click(object sender, EventArgs e)
@@ -257,12 +260,21 @@ namespace IRF_XDQ857
 
 
             textBox_P1.Visible = true;
-            
+            textBox_P2.Visible = true;
+            textBox_P3.Visible = true;
+            textBox_P4.Visible = true;
+            textBox_P5.Visible = true;
+
             button_P1.Enabled = true;
             button_P2.Enabled = true;
             button_P3.Enabled = true;
             button_P4.Enabled = true;
             button_P5.Enabled = true;
+        }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(ready.ToString());
         }
     }
 }

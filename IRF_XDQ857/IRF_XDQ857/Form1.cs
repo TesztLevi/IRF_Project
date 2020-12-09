@@ -14,23 +14,32 @@ namespace IRF_XDQ857
 {
     public partial class Form1 : Form
     {
-        Team_UC Team1 = new Team_UC();
-        Team_UC Team2 = new Team_UC();
+       
 
         BindingList<Team_UC> teams = new BindingList<Team_UC>();
+        
+        
+        public Team_UC Team_H { get; set; }
+        public Team_UC Team_A { get; set; }
+
+        public bool ready;
+
+
 
         public Form1()
         {
             InitializeComponent();
-            
 
+            
 
         }
 
         public void ToolStripButton1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
-            
+
+            Team_UC Team1 = new Team_UC();
+            Team_H = Team1;
             panel1.Controls.Add(Team1);
             Team1.Dock = DockStyle.Fill;
             
@@ -40,11 +49,12 @@ namespace IRF_XDQ857
         {
 
             panel1.Controls.Clear();
-
+            Team_UC Team2 = new Team_UC();
+            Team_A = Team2;
             panel1.Controls.Add(Team2);
             Team2.Dock = DockStyle.Fill;
-            button1.Visible = false;
-            button2.Visible = true;
+            
+            
         }
 
         private void ToolStripButton3_Click(object sender, EventArgs e)
@@ -54,24 +64,41 @@ namespace IRF_XDQ857
             panel1.Controls.Add(market);
         }
 
-        private void Button2_Click(object sender, EventArgs e)
+       
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
         {
-            panel1.Controls.Clear();
+            try
+            {
+                ready = Team_A.ready;
+            }
+            catch (Exception)
+            {
+                //MessageBox.Show("Kérlek álltsd be az ellenfél csapatát is");
 
-            Random r = new Random();
-            Match_UC match = new Match_UC();
-            panel1.Controls.Add(match);
-            match.team1 = Team1;
-            match.team2 = Team2;
-            match.HForm = 15 - Team1.physical / 10;
-            match.H_name = Team1.name;
-            match.A_name = Team2.name;
+            }
+            
+            if (ready == true)
+            {
+                panel1.Controls.Clear();
 
-            
-            
-            
+                Random r = new Random();
+                Match_UC match = new Match_UC();
+                panel1.Controls.Add(match);
+                match.team1 = Team_H;
+                match.team2 = Team_A;
+                match.HForm = 15 - Team_H.physical / 10;
+                match.H_name = Team_H.name;
+                match.A_name = Team_A.name;
+            }
+            else if (ready==false)
+            {
+                MessageBox.Show("Kérlek álltsd be mindkét csapatot");
+            }
+                
+           
+
+
         }
-
-        
     }
 }
