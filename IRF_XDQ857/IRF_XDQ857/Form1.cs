@@ -22,15 +22,17 @@ namespace IRF_XDQ857
         public Team_UC Team_H { get; set; }
         public Team_UC Team_A { get; set; }
 
-        public bool ready;
+         
+        public bool ready_A;
+        public bool ready_H;
 
 
 
         public Form1()
         {
             InitializeComponent();
+           
 
-            
 
         }
 
@@ -42,20 +44,12 @@ namespace IRF_XDQ857
             Team_H = Team1;
             panel1.Controls.Add(Team1);
             Team1.Dock = DockStyle.Fill;
+
+            button_matchstart.Enabled = false;
             
         }
 
-        private void Button1_Click(object sender, EventArgs e)
-        {
-
-            panel1.Controls.Clear();
-            Team_UC Team2 = new Team_UC();
-            Team_A = Team2;
-            panel1.Controls.Add(Team2);
-            Team2.Dock = DockStyle.Fill;
-            
-            
-        }
+        
 
         private void ToolStripButton3_Click(object sender, EventArgs e)
         {
@@ -66,20 +60,9 @@ namespace IRF_XDQ857
 
        
 
-        private void ToolStripButton2_Click(object sender, EventArgs e)
+        private void button_matchstart_Click(object sender, EventArgs e)
         {
-            try
-            {
-                ready = Team_A.ready;
-            }
-            catch (Exception)
-            {
-                //MessageBox.Show("Kérlek álltsd be az ellenfél csapatát is");
-
-            }
             
-            if (ready == true)
-            {
                 panel1.Controls.Clear();
 
                 Random r = new Random();
@@ -90,15 +73,50 @@ namespace IRF_XDQ857
                 match.HForm = 15 - Team_H.physical / 10;
                 match.H_name = Team_H.name;
                 match.A_name = Team_A.name;
-            }
-            else if (ready==false)
-            {
-                MessageBox.Show("Kérlek álltsd be mindkét csapatot");
-            }
-                
+
+            button_awayteam.Enabled = false;
            
 
 
+        }
+
+        private void Form1_MouseMove(object sender, MouseEventArgs e)
+        {
+            try
+            {
+                ready_H = Team_H.ready;
+            }
+            catch (Exception)
+            {
+               
+            }
+
+            try
+            {
+                ready_A = Team_A.ready;
+            }
+            catch (Exception)
+            {
+
+            }
+
+            if (ready_H == true)
+            {
+                button_awayteam.Enabled = true;
+            }
+            if (ready_A == true)
+            {
+                button_matchstart.Enabled = true;
+            }
+        }
+
+        private void Button_awayteam_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            Team_UC Team2 = new Team_UC();
+            Team_A = Team2;
+            panel1.Controls.Add(Team2);
+            Team2.Dock = DockStyle.Fill;
         }
     }
 }

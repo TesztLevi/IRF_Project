@@ -14,6 +14,8 @@ namespace IRF_XDQ857.Entities
     public partial class Market : UserControl
     {
         BindingList<Player> players = new BindingList<Player>();
+
+        
         public Market()
         {
             InitializeComponent();
@@ -61,13 +63,14 @@ namespace IRF_XDQ857.Entities
         private void Button1_Click(object sender, EventArgs e)
         {
             Random r = new Random();
+            
+            
+
+
 
             var attack = from a in players
                          where a.attack > int.Parse(textBox1.Text) && a.defense > int.Parse(textBox2.Text)
-
-
-
-
+                         
                          select new
                          {
                              Név = a.name,
