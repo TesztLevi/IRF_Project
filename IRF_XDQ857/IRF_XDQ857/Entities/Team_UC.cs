@@ -22,7 +22,7 @@ namespace IRF_XDQ857
         public int attack { get; set; }
         public int defense { get; set; }
 
-        public int physical; //{ get; set; }
+        public int physical { get; set; }
         public int value { get; set; }
 
         internal Player P1 { get; set; }
