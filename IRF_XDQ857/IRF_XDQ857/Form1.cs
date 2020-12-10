@@ -118,5 +118,11 @@ namespace IRF_XDQ857
             panel1.Controls.Add(Team2);
             Team2.Dock = DockStyle.Fill;
         }
+
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            Court t = new Court();
+            panel1.Controls.Add(t);
+        }
     }
 }
