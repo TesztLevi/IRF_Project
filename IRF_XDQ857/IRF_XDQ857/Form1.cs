@@ -15,30 +15,18 @@ namespace IRF_XDQ857
 {
     public partial class Form1 : Form
     {
-       
-
-        
         BindingList<Match_UC> matchs = new BindingList<Match_UC>();
         BindingList<Player> players = new BindingList<Player>();
-        
-        
+              
         public Team_UC Team_H { get; set; }
         public Team_UC Team_A { get; set; }
 
         private bool readyH;
         private bool readyA;
-
-
-
-
-
-
-
         public Form1()
         {
             InitializeComponent();
             
-
         }
 
         public void ToolStripButton1_Click(object sender, EventArgs e)
@@ -107,11 +95,7 @@ namespace IRF_XDQ857
 
                 MessageBox.Show("Kérlek nevez be a csapatokat");
             }
-            
-                    
-                
-           
-
+                                            
 
         }
 

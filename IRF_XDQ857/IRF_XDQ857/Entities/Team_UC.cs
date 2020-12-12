@@ -16,14 +16,10 @@ namespace IRF_XDQ857
 
     public partial class Team_UC : UserControl
     {
-        BindingList<Player> players = new BindingList<Player>();
-
-        
-
+        BindingList<Player> players = new BindingList<Player>();      
         public string name { get; set; }
         public int attack { get; set; }
         public int defense { get; set; }
-
         public int physical { get; set; }
         public int value { get; set; }
 
@@ -35,14 +31,6 @@ namespace IRF_XDQ857
 
         public bool ready;
         
-
-
-
-
-
-
-
-
         public Team_UC()
         {
             InitializeComponent();
@@ -58,12 +46,8 @@ namespace IRF_XDQ857
             comboBox_P5.DataSource = players.ToList();
             comboBox_P5.DisplayMember = "name";
             ready = false;
-            MoneyCalculator();
-
-            
-            
-            
-
+            MoneyCalculator();         
+        
         }
 
         private void xmlLoad()
@@ -97,12 +81,8 @@ namespace IRF_XDQ857
             Kereső_P1();
         }
 
-
-
         private void Kereső_P1()
         {
-
-
             comboBox_P1.DataSource = (from p in players
                                       where p.name.StartsWith(textBox_P1.Text)
                                       select p).ToList();
@@ -221,7 +201,7 @@ namespace IRF_XDQ857
                 MessageBox.Show("Nincs elegendő pénzed!");
             }
             
-            //MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString() + physical.ToString());
+            
         }
 
         private void Enabled()
@@ -249,30 +229,11 @@ namespace IRF_XDQ857
             
         }
 
-        private void Button_unsign_Click(object sender, EventArgs e)
-        {
-            comboBox_P1.Enabled = true;
-            comboBox_P2.Enabled = true;
-            comboBox_P3.Enabled = true;
-            comboBox_P4.Enabled = true;
-            comboBox_P5.Enabled = true;
-
-
-
-
-
-            textBox_P1.Visible = true;
-            textBox_P2.Visible = true;
-            textBox_P3.Visible = true;
-            textBox_P4.Visible = true;
-            textBox_P5.Visible = true;
-
-            
-        }
+        
 
         
 
-        private void ComboBox_P1_SelectedIndexChanged(object sender, EventArgs e)
+        private void ComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             MoneyCalculator();
         }

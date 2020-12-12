@@ -44,7 +44,7 @@
             // toolStrip1
             // 
             this.toolStrip1.BackColor = System.Drawing.Color.Turquoise;
-            this.toolStrip1.Font = new System.Drawing.Font("Mongolian Baiti", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStrip1.Font = new System.Drawing.Font("Bookman Old Style", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -75,7 +75,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(114, 33);
+            this.toolStripButton3.Size = new System.Drawing.Size(123, 33);
             this.toolStripButton3.Text = "Játékos Piac";
             this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 
@@ -116,14 +116,14 @@
             // játékosokKiírásaToolStripMenuItem
             // 
             this.játékosokKiírásaToolStripMenuItem.Name = "játékosokKiírásaToolStripMenuItem";
-            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(249, 34);
             this.játékosokKiírásaToolStripMenuItem.Text = "Játékosok kiírása";
             this.játékosokKiírásaToolStripMenuItem.Click += new System.EventHandler(this.JátékosokKiírásaToolStripMenuItem_Click);
             // 
             // meccsekKiírásaToolStripMenuItem
             // 
             this.meccsekKiírásaToolStripMenuItem.Name = "meccsekKiírásaToolStripMenuItem";
-            this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(249, 34);
             this.meccsekKiírásaToolStripMenuItem.Text = "Meccsek kiírása";
             this.meccsekKiírásaToolStripMenuItem.Click += new System.EventHandler(this.MeccsekKiírásaToolStripMenuItem_Click);
             // 
@@ -132,19 +132,20 @@
             this.panel1.AutoScroll = true;
             this.panel1.Location = new System.Drawing.Point(1, 31);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.panel1.MinimumSize = new System.Drawing.Size(750, 600);
+            this.panel1.MinimumSize = new System.Drawing.Size(750, 550);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 600);
+            this.panel1.Size = new System.Drawing.Size(750, 550);
             this.panel1.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoScroll = true;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(748, 594);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
-            this.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.Font = new System.Drawing.Font("Century Schoolbook", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "Form1";
             this.Text = "Kosárlabda szimulátor X20";

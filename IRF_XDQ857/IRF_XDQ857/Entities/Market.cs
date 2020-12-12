@@ -53,25 +53,17 @@ namespace IRF_XDQ857.Entities
 
         }
 
-        private void TextBox1_TextChanged(object sender, EventArgs e)
-        {
-            //Cip cipő = (Cipők)listBox1.SelectedItem;
-
-            
-        }
+        
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Random r = new Random();
-            
-            
+            Random r = new Random();           
+          
+            var watch = from a in players
+                         where a.attack > int.Parse(textBox1.Text) && a.defense > int.Parse(textBox2.Text) &&
+                          a.physical > int.Parse(textBox3.Text) && a.prize < int.Parse(textBox4.Text)
 
-
-
-            var attack = from a in players
-                         where a.attack > int.Parse(textBox1.Text) && a.defense > int.Parse(textBox2.Text)
-                         
-                         select new
+                        select new
                          {
                              Név = a.name,
                              Támadás = a.attack + r.Next(-3,4),
@@ -80,7 +72,7 @@ namespace IRF_XDQ857.Entities
                              Ár = a.prize,
 
                          };
-            dataGridView1.DataSource = attack.ToList();
+            dataGridView1.DataSource = watch.ToList();
         }
     }
 }

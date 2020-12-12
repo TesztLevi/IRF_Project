@@ -18,8 +18,7 @@ namespace IRF_XDQ857.Entities
 
         public DateTime matchstart;
 
-        public int HQ;
-        
+        public int HQ;       
         public int AQ;
 
         public int HS;
@@ -30,8 +29,6 @@ namespace IRF_XDQ857.Entities
 
         public int HForm;
         public int AForm;
-
-        
 
         public string H_name;
         public string A_name;
@@ -134,14 +131,26 @@ namespace IRF_XDQ857.Entities
             button6.Visible = true;
             label15.Visible = true;
 
+            Result();
+
         }
 
-        private void TableLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        private void Result()
         {
-
+            if (HS > AS)
+            {
+                label16.Text = ("A(z) " + H_name + " nyert " + (HS - AS).ToString() + " pontal!");
+            }
+            else if (AS>HS)
+            {
+                label16.Text = ("A(z) " + A_name + " nyert " + (AS - HS).ToString() + " pontal!");
+            }
+            else
+            {
+                label16.Text = ("Döntetlen lett a mérkőzés!");
+            }
+            
         }
-
-       
 
         private void Button6_Click(object sender, EventArgs e)
         {

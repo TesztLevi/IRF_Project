@@ -31,7 +31,7 @@ namespace IRF_XDQ857.Entities
         private void DrawImage(Graphics g)
         {
             Pen hawk = new Pen(Color.Black);
-            Brush spider = new SolidBrush(Color.Gold);
+            //Brush spider = new SolidBrush(Color.Gold);
 
             Rectangle court = new Rectangle(0, 0, 150, 280); // maga  apálya
             Rectangle area_H_1 = new Rectangle(50, 0, 50, 58);
@@ -42,7 +42,7 @@ namespace IRF_XDQ857.Entities
             g.DrawRectangle(hawk, area_H_1);
             g.DrawRectangle(hawk, area_A_1);
 
-            //g.FillRectangle(spider, curt);
+            
             g.DrawLine(hawk, 0, 140, 150, 140);
             g.DrawEllipse(hawk, circle);
 
@@ -58,23 +58,15 @@ namespace IRF_XDQ857.Entities
             g.DrawArc(hawk, semicircle_A, 0, -180);
 
 
-            //Teamname_H = "Hazai";
-            //Teamname_A = "Vendég";
-            //point_H = "123";
-            //point_A = "122";
-
-
-            
-
-
+                  
         }
 
         public void scoresheet(Graphics g)
         {
-            g.DrawString(Teamname_H, new Font("Arial", 16), new SolidBrush(Color.Black), 175, 95);
-            g.DrawString(Teamname_A, new Font("Arial", 16), new SolidBrush(Color.Black), 175, 145);
-            g.DrawString(point_H, new Font("Arial", 16), new SolidBrush(Color.Black), 175, 120);
-            g.DrawString(point_A, new Font("Arial", 16), new SolidBrush(Color.Black), 175, 170);
+            g.DrawString(Teamname_H, new Font("Elephant", 16), new SolidBrush(Color.Black), 175, 95);
+            g.DrawString(Teamname_A, new Font("Elephant", 16), new SolidBrush(Color.Black), 175, 145);
+            g.DrawString(point_H, new Font("Elephant", 16), new SolidBrush(Color.Black), 175, 120);
+            g.DrawString(point_A, new Font("Elephant", 16), new SolidBrush(Color.Black), 175, 170);
         }
     }
 
