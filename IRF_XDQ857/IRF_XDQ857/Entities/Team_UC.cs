@@ -308,6 +308,11 @@ namespace IRF_XDQ857
             }
             
         }
+
+        private void Team_UC_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

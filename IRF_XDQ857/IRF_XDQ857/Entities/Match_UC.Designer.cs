@@ -46,8 +46,8 @@
             this.label14 = new System.Windows.Forms.Label();
             this.panel_grapics = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
             this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
@@ -55,9 +55,9 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(461, 17);
+            this.button1.Location = new System.Drawing.Point(460, 21);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(159, 45);
+            this.button1.Size = new System.Drawing.Size(177, 45);
             this.button1.TabIndex = 0;
             this.button1.Text = "Első negyed";
             this.button1.UseVisualStyleBackColor = true;
@@ -65,9 +65,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(461, 17);
+            this.button2.Location = new System.Drawing.Point(460, 21);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(159, 45);
+            this.button2.Size = new System.Drawing.Size(177, 45);
             this.button2.TabIndex = 1;
             this.button2.Text = "Második negyed";
             this.button2.UseVisualStyleBackColor = true;
@@ -76,9 +76,9 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(461, 17);
+            this.button3.Location = new System.Drawing.Point(460, 21);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(159, 45);
+            this.button3.Size = new System.Drawing.Size(177, 45);
             this.button3.TabIndex = 2;
             this.button3.Text = "Harmadik negyed";
             this.button3.UseVisualStyleBackColor = true;
@@ -87,9 +87,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(461, 17);
+            this.button4.Location = new System.Drawing.Point(460, 21);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(159, 45);
+            this.button4.Size = new System.Drawing.Size(177, 45);
             this.button4.TabIndex = 3;
             this.button4.Text = "Negyedik negyed";
             this.button4.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(74, 65);
+            this.label2.Location = new System.Drawing.Point(82, 65);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(0, 20);
             this.label2.TabIndex = 5;
@@ -123,7 +123,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(74, 96);
+            this.label4.Location = new System.Drawing.Point(82, 96);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(0, 20);
             this.label4.TabIndex = 7;
@@ -139,7 +139,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(74, 125);
+            this.label6.Location = new System.Drawing.Point(82, 125);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 20);
             this.label6.TabIndex = 9;
@@ -155,7 +155,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(74, 150);
+            this.label8.Location = new System.Drawing.Point(82, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 20);
             this.label8.TabIndex = 11;
@@ -163,36 +163,36 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(487, 318);
+            this.label11.Location = new System.Drawing.Point(457, 312);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(30, 20);
+            this.label11.Size = new System.Drawing.Size(32, 20);
             this.label11.TabIndex = 12;
             this.label11.Text = "Q1";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(487, 349);
+            this.label12.Location = new System.Drawing.Point(457, 343);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(30, 20);
+            this.label12.Size = new System.Drawing.Size(32, 20);
             this.label12.TabIndex = 13;
             this.label12.Text = "Q2";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(487, 378);
+            this.label13.Location = new System.Drawing.Point(457, 372);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(30, 20);
+            this.label13.Size = new System.Drawing.Size(32, 20);
             this.label13.TabIndex = 14;
             this.label13.Text = "Q3";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(487, 403);
+            this.label14.Location = new System.Drawing.Point(457, 397);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(30, 20);
+            this.label14.Size = new System.Drawing.Size(32, 20);
             this.label14.TabIndex = 15;
             this.label14.Text = "Q4";
             // 
@@ -200,7 +200,7 @@
             // 
             this.panel_grapics.Location = new System.Drawing.Point(0, 0);
             this.panel_grapics.Name = "panel_grapics";
-            this.panel_grapics.Size = new System.Drawing.Size(446, 476);
+            this.panel_grapics.Size = new System.Drawing.Size(447, 476);
             this.panel_grapics.TabIndex = 17;
             // 
             // groupBox1
@@ -215,36 +215,36 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.Controls.Add(this.label7);
-            this.groupBox1.Location = new System.Drawing.Point(522, 253);
+            this.groupBox1.Location = new System.Drawing.Point(496, 247);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(197, 183);
+            this.groupBox1.Size = new System.Drawing.Size(219, 183);
             this.groupBox1.TabIndex = 19;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Pontok negyedenként";
             // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 35);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(47, 20);
-            this.label9.TabIndex = 12;
-            this.label9.Text = "Haza";
-            // 
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(74, 35);
+            this.label10.Location = new System.Drawing.Point(82, 35);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 20);
+            this.label10.Size = new System.Drawing.Size(70, 20);
             this.label10.TabIndex = 0;
             this.label10.Text = "Vendég";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(7, 35);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(50, 20);
+            this.label9.TabIndex = 12;
+            this.label9.Text = "Haza";
+            // 
             // button6
             // 
-            this.button6.Location = new System.Drawing.Point(461, 160);
+            this.button6.Location = new System.Drawing.Point(460, 147);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(159, 58);
+            this.button6.Size = new System.Drawing.Size(177, 51);
             this.button6.TabIndex = 13;
             this.button6.Text = "Meccsadatok kiírása CSV-be";
             this.button6.UseVisualStyleBackColor = true;
@@ -254,17 +254,16 @@
             // label15
             // 
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(457, 88);
+            this.label15.Location = new System.Drawing.Point(456, 86);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(271, 40);
+            this.label15.Size = new System.Drawing.Size(313, 40);
             this.label15.TabIndex = 20;
-            this.label15.Text = "A meccsinditásra kattintva bármennyi\r\n visszavágót tudsz játszani!";
+            this.label15.Text = "A kezdősípszóra kattintva bármennyi\r\n visszavágót tudsz játszani!";
             this.label15.Visible = false;
             // 
             // Match_UC
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.Controls.Add(this.label15);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox1);
@@ -277,8 +276,9 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label13);
+            this.Font = new System.Drawing.Font("MS Reference Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "Match_UC";
-            this.Size = new System.Drawing.Size(740, 479);
+            this.Size = new System.Drawing.Size(750, 600);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
