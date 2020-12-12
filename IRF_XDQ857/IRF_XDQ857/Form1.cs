@@ -25,29 +25,34 @@ namespace IRF_XDQ857
         public Team_UC Team_H { get; set; }
         public Team_UC Team_A { get; set; }
 
-         
-        public bool ready_A;
-        public bool ready_H;
+        private bool readyH;
+        private bool readyA;
+
+
+
+
 
 
 
         public Form1()
         {
             InitializeComponent();
-           
-
+            
 
         }
 
         public void ToolStripButton1_Click(object sender, EventArgs e)
         {
             panel1.Controls.Clear();
+            readyH = false;
+            readyA = false;
 
             Team_UC Team1 = new Team_UC();
             Team_H = Team1;
             panel1.Controls.Add(Team1);
-            Team1.Dock = DockStyle.Fill;
+            Team1.Dock = DockStyle.Fill; 
 
+            button_awayteam.Enabled = false;
             button_matchstart.Enabled = false;
             
         }
@@ -65,57 +70,52 @@ namespace IRF_XDQ857
 
         private void button_matchstart_Click(object sender, EventArgs e)
         {
+
+            try
+            {
+                if (Team_H.name.Length < 3)
+                
+                {
+                    MessageBox.Show("Kérlek nevez be a csapatokat");
+                }
+                else if (Team_A.name.Length < 3)
+                {
+                    MessageBox.Show("Kérlek nevez be a csapatokat");
+                }
+                else
+                {
+                    panel1.Controls.Clear();
+
+                    Random r = new Random();
+                    Match_UC match = new Match_UC();
+                    panel1.Controls.Add(match);
+                    match.team1 = Team_H;
+                    match.team2 = Team_A;
+                    match.HForm = Team_H.physical / 10;
+                    match.AForm = Team_A.physical / 10;
+
+                    match.H_name = Team_H.name;
+                    match.A_name = Team_A.name;
+
+                    matchs.Add(match);
+
+                    button_awayteam.Enabled = false;
+                }
+            }
+            catch (Exception)
+            {
+
+                MessageBox.Show("Kérlek nevez be a csapatokat");
+            }
             
-                panel1.Controls.Clear();
-
-                Random r = new Random();
-                Match_UC match = new Match_UC();
-                panel1.Controls.Add(match);
-                match.team1 = Team_H;
-                match.team2 = Team_A;
-                match.HForm = Team_H.physical / 10;
-                match.AForm = Team_A.physical / 10;
-            
-                match.H_name = Team_H.name;
-                match.A_name = Team_A.name;
-
-                matchs.Add(match);
-
-                button_awayteam.Enabled = false;
+                    
+                
            
 
 
         }
 
-        private void Form1_MouseMove(object sender, MouseEventArgs e)
-        {
-            try
-            {
-                ready_H = Team_H.ready;
-            }
-            catch (Exception)
-            {
-               
-            }
-
-            try
-            {
-                ready_A = Team_A.ready;
-            }
-            catch (Exception)
-            {
-
-            }
-
-            if (ready_H == true)
-            {
-                button_awayteam.Enabled = true;
-            }
-            if (ready_A == true)
-            {
-                button_matchstart.Enabled = true;
-            }
-        }
+       
 
         private void Button_awayteam_Click(object sender, EventArgs e)
         {
@@ -203,6 +203,33 @@ namespace IRF_XDQ857
 
                 player.prize = prize;
             }
+        }
+
+        private void ToolStrip1_MouseHover(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                readyH = Team_H.ready;
+                readyA = Team_A.ready;
+            }
+            catch (Exception)
+            {
+
+
+            }
+            if (readyH == true)
+            {
+                button_awayteam.Enabled = true;
+                
+            }
+            if (readyA == true)
+            {
+                button_matchstart.Enabled = true;
+                
+                
+            }
+
         }
     }
 }

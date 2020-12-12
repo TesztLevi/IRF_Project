@@ -18,7 +18,7 @@ namespace IRF_XDQ857
     {
         BindingList<Player> players = new BindingList<Player>();
 
-        public bool ready { get; set; }
+        
 
         public string name { get; set; }
         public int attack { get; set; }
@@ -33,8 +33,8 @@ namespace IRF_XDQ857
         internal Player P4 { get; set; }
         internal Player P5 { get; set; }
 
-
-
+        public bool ready;
+        
 
 
 
@@ -57,8 +57,11 @@ namespace IRF_XDQ857
             comboBox_P4.DisplayMember = "name";
             comboBox_P5.DataSource = players.ToList();
             comboBox_P5.DisplayMember = "name";
-
             ready = false;
+            MoneyCalculator();
+
+            
+            
             
 
         }
@@ -105,14 +108,7 @@ namespace IRF_XDQ857
                                       select p).ToList();
         }
 
-        private void Button_P1_Click(object sender, EventArgs e)
-        {
-            comboBox_P1.Enabled = false;
-
-            textBox_P1.Visible = false;
-            
-            button_P1.Enabled = false;
-        }
+       
 
         private void TextBox_P2_TextChanged(object sender, EventArgs e)
         {
@@ -126,14 +122,7 @@ namespace IRF_XDQ857
                                       select p).ToList();
         }
 
-        private void Button_P2_Click(object sender, EventArgs e)
-        {
-            comboBox_P2.Enabled = false;
-
-            textBox_P2.Visible = false;
-            
-            button_P2.Enabled = false;
-        }
+       
 
         private void TextBox_P3_TextChanged(object sender, EventArgs e)
         {
@@ -147,14 +136,7 @@ namespace IRF_XDQ857
                                       select p).ToList();
         }
 
-        private void Button_P3_Click(object sender, EventArgs e)
-        {
-            comboBox_P3.Enabled = false;
-
-            textBox_P3.Visible = false;
-            
-            button_P3.Enabled = false;
-        }
+       
 
         private void TextBox_P4_TextChanged(object sender, EventArgs e)
         {
@@ -168,14 +150,7 @@ namespace IRF_XDQ857
                                       select p).ToList();
         }
 
-        private void Button_P4_Click(object sender, EventArgs e)
-        {
-            comboBox_P4.Enabled = false;
-
-            textBox_P4.Visible = false;
-            
-            button_P4.Enabled = false;
-        }
+        
 
         private void TextBox_P5_TextChanged(object sender, EventArgs e)
         {
@@ -189,30 +164,33 @@ namespace IRF_XDQ857
                                       select p).ToList();
         }
 
-        private void Button_P5_Click(object sender, EventArgs e)
-        {
-            comboBox_P5.Enabled = false;
-
-            textBox_P5.Visible = false;
-            button_P5.Enabled = false;
-
-            button_unsign.Visible = true;
-
-        }
+        
 
 
 
         public void Button_ready_Click_1(object sender, EventArgs e)
         {
-            if (textBox_T_name.TextLength > 3)
+            Player p1 = (Player)comboBox_P1.SelectedItem;
+            Player p2 = (Player)comboBox_P2.SelectedItem;
+            Player p3 = (Player)comboBox_P3.SelectedItem;
+            Player p4 = (Player)comboBox_P4.SelectedItem;
+            Player p5 = (Player)comboBox_P5.SelectedItem;
+            try
+            {
+                value = (p1.prize + p2.prize + p3.prize + p4.prize + p5.prize);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Kérlek lézető játékosnevet írj be");
+                
+            }
+
+
+            if (textBox_T_name.TextLength > 2 && value <= 100)
             {
                 textBox_T_name.Enabled = false;
 
-                Player p1 = (Player)comboBox_P1.SelectedItem;
-                Player p2 = (Player)comboBox_P2.SelectedItem;
-                Player p3 = (Player)comboBox_P3.SelectedItem;
-                Player p4 = (Player)comboBox_P4.SelectedItem;
-                Player p5 = (Player)comboBox_P5.SelectedItem;
+
 
                 P1 = p1;
                 P2 = p2;
@@ -224,16 +202,40 @@ namespace IRF_XDQ857
                 attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack) / 5;
                 defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense) / 5;
                 physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical) / 5;
-                MessageBox.Show("Gratulálunk, készen van a csapatod!"+ready);
+                MessageBox.Show("Gratulálunk, készen van a csapatod!");
                 button_ready.Enabled = false;
                 ready = true;
+                
+                Enabled();
             }
-            else
+            else if (textBox_T_name.TextLength < 3 && value > 100)
+            {
+                MessageBox.Show("Kérlek add meg a Csapatod nevét is, és figyelj a költségeidre!");
+            }
+            else if (textBox_T_name.TextLength < 3)
             {
                 MessageBox.Show("Kérlek add meg a Csapatod nevét is!");
             }
+            else if (value > 100)
+            {
+                MessageBox.Show("Nincs elegendő pénzed!");
+            }
             
             //MessageBox.Show("Csapatod neve:" + name + " Attack: " + attack.ToString() + " Defense:" + defense.ToString() + physical.ToString());
+        }
+
+        private void Enabled()
+        {
+            textBox_P1.Enabled = false;
+            comboBox_P1.Enabled = false;
+            textBox_P2.Enabled = false;
+            comboBox_P2.Enabled = false;
+            textBox_P3.Enabled = false;
+            comboBox_P3.Enabled = false;
+            textBox_P4.Enabled = false;
+            comboBox_P4.Enabled = false;
+            textBox_P5.Enabled = false;
+            comboBox_P5.Enabled = false;
         }
 
         private void Button_ready_MouseHover(object sender, EventArgs e)
@@ -265,16 +267,46 @@ namespace IRF_XDQ857
             textBox_P4.Visible = true;
             textBox_P5.Visible = true;
 
-            button_P1.Enabled = true;
-            button_P2.Enabled = true;
-            button_P3.Enabled = true;
-            button_P4.Enabled = true;
-            button_P5.Enabled = true;
+            
         }
 
-        private void Button1_Click(object sender, EventArgs e)
+        
+
+        private void ComboBox_P1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            MessageBox.Show(ready.ToString());
+            MoneyCalculator();
+        }
+
+        private void MoneyCalculator()
+        {
+            int money;
+            try
+            {
+                Player p1 = (Player)comboBox_P1.SelectedItem;
+                Player p2 = (Player)comboBox_P2.SelectedItem;
+                Player p3 = (Player)comboBox_P3.SelectedItem;
+                Player p4 = (Player)comboBox_P4.SelectedItem;
+                Player p5 = (Player)comboBox_P5.SelectedItem;
+
+                money = 100 - (p1.prize + p2.prize + p3.prize + p4.prize + p5.prize);
+
+                label_money.Text = money.ToString();
+
+                if (money<0)
+                {
+                    label_money.ForeColor = Color.Red;
+                }
+                else
+                {
+                    label_money.ForeColor = Color.Black;
+                }
+            }
+            catch (Exception)
+            {
+
+                
+            }
+            
         }
     }
 }

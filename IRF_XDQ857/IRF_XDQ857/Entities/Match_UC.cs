@@ -70,7 +70,7 @@ namespace IRF_XDQ857.Entities
             AQ = (team2.attack - r.Next(-(15 - AForm), AForm)) * (team2.attack - r.Next(-(15 - AForm), AForm)) / (team1.defense - r.Next(-(15 - HForm), HForm)) / 4;
             HS = HS + HQ;
             AS = AS + AQ;
-            MessageBox.Show(HForm.ToString() + "   " + AForm.ToString());
+            
         }
         private void Button1_Click(object sender, EventArgs e) 
         {
@@ -81,6 +81,7 @@ namespace IRF_XDQ857.Entities
             label2.Text = AQ.ToString();
             Scorerefresh();
             button1.Visible = false;
+            button1.Enabled = false;
             button2.Visible = true;
 
         }
@@ -104,6 +105,7 @@ namespace IRF_XDQ857.Entities
             label4.Text = AQ.ToString();
             Scorerefresh();
             button2.Visible = false;
+            button2.Enabled = false;
             button3.Visible = true;
 
         }
@@ -116,6 +118,7 @@ namespace IRF_XDQ857.Entities
             label6.Text = AQ.ToString();
             Scorerefresh();
             button3.Visible = false;
+            button3.Enabled = false;
             button4.Visible = true;
         }
 
@@ -127,6 +130,7 @@ namespace IRF_XDQ857.Entities
             label8.Text = AQ.ToString();
             Scorerefresh();
             button4.Visible = false;
+            button4.Enabled = false;
             button6.Visible = true;
             label15.Visible = true;
 

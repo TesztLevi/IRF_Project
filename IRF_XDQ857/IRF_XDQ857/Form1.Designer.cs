@@ -52,9 +52,10 @@
             this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1437, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(763, 34);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
+            this.toolStrip1.MouseHover += new System.EventHandler(this.ToolStrip1_MouseHover);
             // 
             // toolStripButton1
             // 
@@ -112,14 +113,14 @@
             // játékosokKiírásaToolStripMenuItem
             // 
             this.játékosokKiírásaToolStripMenuItem.Name = "játékosokKiírásaToolStripMenuItem";
-            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
             this.játékosokKiírásaToolStripMenuItem.Text = "Játékosok kiírása";
             this.játékosokKiírásaToolStripMenuItem.Click += new System.EventHandler(this.JátékosokKiírásaToolStripMenuItem_Click);
             // 
             // meccsekKiírásaToolStripMenuItem
             // 
             this.meccsekKiírásaToolStripMenuItem.Name = "meccsekKiírásaToolStripMenuItem";
-            this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
             this.meccsekKiírásaToolStripMenuItem.Text = "Meccsek kiírása";
             this.meccsekKiírásaToolStripMenuItem.Click += new System.EventHandler(this.MeccsekKiírásaToolStripMenuItem_Click);
             // 
@@ -134,12 +135,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1437, 820);
+            this.ClientSize = new System.Drawing.Size(763, 620);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
-            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseMove);
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -155,8 +155,8 @@
         private System.Windows.Forms.ToolStripButton toolStripButton3;
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem játékosokKiírásaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripButton button_awayteam;
         private System.Windows.Forms.ToolStripMenuItem meccsekKiírásaToolStripMenuItem;
+        internal System.Windows.Forms.ToolStripButton button_awayteam;
     }
 }
 
