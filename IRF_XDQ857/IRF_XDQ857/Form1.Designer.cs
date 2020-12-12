@@ -37,6 +37,7 @@
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.játékosokKiírásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.meccsekKiírásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +52,7 @@
             this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1437, 38);
+            this.toolStrip1.Size = new System.Drawing.Size(1437, 34);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -70,7 +71,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(110, 33);
+            this.toolStripButton3.Size = new System.Drawing.Size(110, 29);
             this.toolStripButton3.Text = "Játékos Piac";
             this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 
@@ -100,7 +101,8 @@
             // 
             this.toolStripSplitButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
             this.toolStripSplitButton1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.játékosokKiírásaToolStripMenuItem});
+            this.játékosokKiírásaToolStripMenuItem,
+            this.meccsekKiírásaToolStripMenuItem});
             this.toolStripSplitButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripSplitButton1.Image")));
             this.toolStripSplitButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripSplitButton1.Name = "toolStripSplitButton1";
@@ -119,6 +121,13 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(750, 580);
             this.panel1.TabIndex = 8;
+            // 
+            // meccsekKiírásaToolStripMenuItem
+            // 
+            this.meccsekKiírásaToolStripMenuItem.Name = "meccsekKiírásaToolStripMenuItem";
+            this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.meccsekKiírásaToolStripMenuItem.Text = "Meccsek kiírása";
+            this.meccsekKiírásaToolStripMenuItem.Click += new System.EventHandler(this.MeccsekKiírásaToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -146,6 +155,7 @@
         private System.Windows.Forms.ToolStripSplitButton toolStripSplitButton1;
         private System.Windows.Forms.ToolStripMenuItem játékosokKiírásaToolStripMenuItem;
         private System.Windows.Forms.ToolStripButton button_awayteam;
+        private System.Windows.Forms.ToolStripMenuItem meccsekKiírásaToolStripMenuItem;
     }
 }
 

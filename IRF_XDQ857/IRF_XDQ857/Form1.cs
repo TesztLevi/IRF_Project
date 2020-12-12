@@ -17,6 +17,7 @@ namespace IRF_XDQ857
        
 
         BindingList<Team_UC> teams = new BindingList<Team_UC>();
+        BindingList<Match_UC> matchs = new BindingList<Match_UC>();
         
         
         public Team_UC Team_H { get; set; }
@@ -76,6 +77,8 @@ namespace IRF_XDQ857
                 match.H_name = Team_H.name;
                 match.A_name = Team_A.name;
 
+                matchs.Add(match);
+
                 button_awayteam.Enabled = false;
            
 
@@ -121,6 +124,9 @@ namespace IRF_XDQ857
             Team2.Dock = DockStyle.Fill;
         }
 
-        
+        private void MeccsekKiírásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace IRF_XDQ857.Entities
 {
@@ -156,6 +157,64 @@ namespace IRF_XDQ857.Entities
 
         private void Button6_Click(object sender, EventArgs e)
         {
+            SaveFileDialog sf = new SaveFileDialog();
+            if (sf.ShowDialog() != DialogResult.OK) return;
+            using (StreamWriter sw = new StreamWriter(sf.FileName, false, Encoding.UTF8))
+            {
+
+                
+
+                    sw.Write(team1.name);
+                    sw.Write(";");
+                    sw.Write(team1.P1.name);
+                    sw.Write(";");
+                    sw.Write(team1.P2.name);
+                    sw.Write(";");
+                    sw.Write(team1.P3.name);
+                    sw.Write(";");
+                    sw.Write(team1.P4.name);
+                    sw.Write(";");
+                    sw.Write(team1.P5.name);
+                    sw.Write(";");
+                    sw.Write(team1.attack.ToString());
+                    sw.Write(";");
+                    sw.Write(team1.defense.ToString());
+                    sw.Write(";");
+                    sw.Write(team1.physical.ToString());
+                    sw.Write(";");
+                    sw.Write(team1.value.ToString());
+                    sw.Write(";");
+                    sw.Write(HS.ToString());
+                    sw.Write(";");
+
+                    sw.WriteLine();
+
+                    sw.Write(team2.name);
+                    sw.Write(";");
+                    sw.Write(team2.P1.name);
+                    sw.Write(";");
+                    sw.Write(team2.P2.name);
+                    sw.Write(";");
+                    sw.Write(team2.P3.name);
+                    sw.Write(";");
+                    sw.Write(team2.P4.name);
+                    sw.Write(";");
+                    sw.Write(team2.P5.name);
+                    sw.Write(";");
+                    sw.Write(team2.attack.ToString());
+                    sw.Write(";");
+                    sw.Write(team2.defense.ToString());
+                    sw.Write(";");
+                    sw.Write(team2.physical.ToString());
+                    sw.Write(";");
+                    sw.Write(team2.value.ToString());
+                    sw.Write(";");
+                    sw.Write(AS.ToString());
+                    sw.Write(";");
+
+                    sw.WriteLine();
+
+            }
 
         }
     }
