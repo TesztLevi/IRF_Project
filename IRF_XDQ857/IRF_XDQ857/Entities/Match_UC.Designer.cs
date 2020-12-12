@@ -45,11 +45,11 @@
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.panel_grapics = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.label15 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -203,17 +203,6 @@
             this.panel_grapics.Size = new System.Drawing.Size(446, 476);
             this.panel_grapics.TabIndex = 17;
             // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(461, 88);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(159, 45);
-            this.button5.TabIndex = 18;
-            this.button5.Text = "Visszavágó";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Visible = false;
-            this.button5.Click += new System.EventHandler(this.Button5_Click);
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label10);
@@ -262,13 +251,23 @@
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.Button6_Click);
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(457, 88);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(271, 40);
+            this.label15.TabIndex = 20;
+            this.label15.Text = "A meccsinditásra kattintva bármennyi\r\n visszavágót tudsz játszani!";
+            this.label15.Visible = false;
+            // 
             // Match_UC
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button5);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.panel_grapics);
             this.Controls.Add(this.button4);
@@ -306,10 +305,10 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel_grapics;
-        private System.Windows.Forms.Button button5;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Label label15;
     }
 }

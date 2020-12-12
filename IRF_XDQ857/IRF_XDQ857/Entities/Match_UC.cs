@@ -16,6 +16,8 @@ namespace IRF_XDQ857.Entities
         public Team_UC team1 { get; set; }
         public Team_UC team2 { get; set; }
 
+        public DateTime matchstart;
+
         public int HQ;
         
         public int AQ;
@@ -41,7 +43,7 @@ namespace IRF_XDQ857.Entities
         public Match_UC()
         {
             InitializeComponent();
-            
+            matchstart = DateTime.Now;
             HS = 0;
             AS = 0;
             
@@ -125,8 +127,8 @@ namespace IRF_XDQ857.Entities
             label8.Text = AQ.ToString();
             Scorerefresh();
             button4.Visible = false;
-            button5.Visible = true;
             button6.Visible = true;
+            label15.Visible = true;
 
         }
 
@@ -135,25 +137,7 @@ namespace IRF_XDQ857.Entities
 
         }
 
-        private void Button5_Click(object sender, EventArgs e)
-        {
-            button1.Visible = true;
-            button5.Visible = false;
-            HS = 0;
-            AS = 0;
-            Scorerefresh();
-            HQ = 0;
-            AQ = 0;
-            label1.Text = "";
-            label2.Text = "";
-            label3.Text = "";
-            label4.Text = "";
-            label5.Text = "";
-            label6.Text = "";
-            label7.Text = "";
-            label8.Text = "";
-
-        }
+       
 
         private void Button6_Click(object sender, EventArgs e)
         {

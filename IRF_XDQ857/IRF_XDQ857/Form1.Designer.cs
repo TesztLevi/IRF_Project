@@ -36,8 +36,8 @@
             this.button_awayteam = new System.Windows.Forms.ToolStripButton();
             this.toolStripSplitButton1 = new System.Windows.Forms.ToolStripSplitButton();
             this.játékosokKiírásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.meccsekKiírásaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,15 +112,9 @@
             // játékosokKiírásaToolStripMenuItem
             // 
             this.játékosokKiírásaToolStripMenuItem.Name = "játékosokKiírásaToolStripMenuItem";
-            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(246, 34);
+            this.játékosokKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.játékosokKiírásaToolStripMenuItem.Text = "Játékosok kiírása";
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(12, 37);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(750, 580);
-            this.panel1.TabIndex = 8;
+            this.játékosokKiírásaToolStripMenuItem.Click += new System.EventHandler(this.JátékosokKiírásaToolStripMenuItem_Click);
             // 
             // meccsekKiírásaToolStripMenuItem
             // 
@@ -128,6 +122,13 @@
             this.meccsekKiírásaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.meccsekKiírásaToolStripMenuItem.Text = "Meccsek kiírása";
             this.meccsekKiírásaToolStripMenuItem.Click += new System.EventHandler(this.MeccsekKiírásaToolStripMenuItem_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.Location = new System.Drawing.Point(12, 37);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(750, 580);
+            this.panel1.TabIndex = 8;
             // 
             // Form1
             // 

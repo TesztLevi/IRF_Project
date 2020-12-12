@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,8 +17,9 @@ namespace IRF_XDQ857
     {
        
 
-        BindingList<Team_UC> teams = new BindingList<Team_UC>();
+        
         BindingList<Match_UC> matchs = new BindingList<Match_UC>();
+        BindingList<Player> players = new BindingList<Player>();
         
         
         public Team_UC Team_H { get; set; }
@@ -126,7 +128,81 @@ namespace IRF_XDQ857
 
         private void MeccsekKiírásaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            SaveFileDialog sf = new SaveFileDialog();
+            if (sf.ShowDialog() != DialogResult.OK) return;
+            using (StreamWriter sw = new StreamWriter(sf.FileName, false, Encoding.UTF8))
+            {
 
+                foreach (var s in matchs)
+                {
+                    sw.Write(s.matchstart.ToString());
+                    sw.Write(";");
+                    sw.Write(s.team1.name.ToString());
+                    sw.Write(";");
+                    sw.Write(s.HS.ToString());
+                    sw.Write(";");
+                    sw.Write(s.team2.name.ToString());
+                    sw.Write(";");
+                    sw.Write(s.AS.ToString());
+                    sw.Write(";");
+                    sw.WriteLine();
+
+                }
+            }
+
+        }
+
+        private void JátékosokKiírásaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            XMLLoad();
+
+            SaveFileDialog sf = new SaveFileDialog();
+            if (sf.ShowDialog() != DialogResult.OK) return;
+            using (StreamWriter sw = new StreamWriter(sf.FileName, false, Encoding.UTF8))
+            {
+
+                foreach (var p in players)
+                {
+                    sw.Write(p.name);
+                    sw.Write(";");
+                    sw.Write(p.attack.ToString());
+                    sw.Write(";");
+                    sw.Write(p.physical.ToString());
+                    sw.Write(";");
+                    sw.Write(p.defense.ToString());
+                    sw.Write(";");
+                    sw.Write(p.prize.ToString());
+                    sw.Write(";");
+                    sw.WriteLine();
+
+                }
+            }
+        }
+
+        private void XMLLoad()
+        {
+            var xml = new XmlDocument();
+            xml.Load("XML/IRF_Players.xml");
+
+            foreach (XmlElement element in xml.DocumentElement)
+            {
+
+                var player = new Player();
+                players.Add(player);
+
+
+                player.name = (element.GetAttribute("name"));
+
+
+                var childElement = (XmlElement)element.ChildNodes[0];
+                player.attack = int.Parse(childElement.GetAttribute("att"));
+                player.defense = int.Parse(childElement.GetAttribute("def"));
+                player.physical = int.Parse(childElement.GetAttribute("phy"));
+
+                var prize = int.Parse(childElement.InnerText);
+
+                player.prize = prize;
+            }
         }
     }
 }
