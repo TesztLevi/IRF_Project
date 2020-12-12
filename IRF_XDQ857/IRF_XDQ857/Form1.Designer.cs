@@ -51,7 +51,7 @@
             this.toolStripSplitButton1});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1437, 34);
+            this.toolStrip1.Size = new System.Drawing.Size(1437, 38);
             this.toolStrip1.TabIndex = 7;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -70,7 +70,7 @@
             this.toolStripButton3.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton3.Image")));
             this.toolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.toolStripButton3.Name = "toolStripButton3";
-            this.toolStripButton3.Size = new System.Drawing.Size(110, 29);
+            this.toolStripButton3.Size = new System.Drawing.Size(110, 33);
             this.toolStripButton3.Text = "Játékos Piac";
             this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 

@@ -70,11 +70,13 @@ namespace IRF_XDQ857
                 panel1.Controls.Add(match);
                 match.team1 = Team_H;
                 match.team2 = Team_A;
-                match.HForm = 15 - Team_H.physical / 10;
+                match.HForm = Team_H.physical / 10;
+                match.AForm = Team_A.physical / 10;
+            
                 match.H_name = Team_H.name;
                 match.A_name = Team_A.name;
 
-            button_awayteam.Enabled = false;
+                button_awayteam.Enabled = false;
            
 
 
