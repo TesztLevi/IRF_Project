@@ -33,14 +33,45 @@
 <Prize att="74" def="69" phy="62" >5</Prize>
 </player>
 <player name="Steph Curry">
-<Prize att="94" def="74" phy="77" >34</Prize>
+<Prize att="96" def="74" phy="77" >34</Prize>
 </player>
 <player name="Kyrie Irving">
 <Prize att="94" def="69" phy="72" >28</Prize>
 </player>
-<player name="giannis antetokounmpo">
+<player name="Giannis Antetokounmpo">
 <Prize att="87" def="91" phy="90" >34</Prize>
 </player>
+<player name="Anthony Davis">
+<Prize att="85" def="91" phy="91" >32</Prize>
+</player>
+<player name="Nikola Jokic">
+	<Prize att="82" def="87" phy="87" >25</Prize>
+</player>
+<player name="Ben Simnoms">
+	<Prize att="74" def="86" phy="84" >18</Prize>
+</player>
+<player name="Donovan Mitchell">
+	<Prize att="88" def="74" phy="69" >16</Prize>
+</player>
+<player name="Draymond Green">
+	<Prize att="68" def="87" phy="75" >14</Prize>
+</player>
+<player name="Andrew Roberson">
+	<Prize att="55" def="85" phy="87">6</Prize>
+</player>
+<player name="James Harden">
+<Prize att="94" def="77" phy="77" >32</Prize>
+</player>
+<player name="Miles Bridges">
+<Prize att="71" def="75" phy="78" >8</Prize>
+</player>
+<player name="Lamelo Ball">
+<Prize att="78" def="54" phy="63" >4</Prize>
+</player>
+<player name="Zion Williamson">
+<Prize att="80" def="83" phy="95" >12</Prize>
+</player>
+	
 </LeviBeadandoIRF>
 
 
