@@ -69,6 +69,18 @@ namespace IRF_XDQ857.Entities
             AS = AS + AQ;
             
         }
+
+        private void Scorerefresh()
+        {
+            panel_grapics.Controls.Clear();
+            Court c = new Court();
+            panel_grapics.Controls.Add(c);
+            c.Teamname_H = H_name;
+            c.Teamname_A = A_name;
+            c.point_H = HS.ToString();
+            c.point_A = AS.ToString();
+        }
+
         private void Button1_Click(object sender, EventArgs e) 
         {
             MatchEngine();
@@ -83,17 +95,7 @@ namespace IRF_XDQ857.Entities
 
         }
 
-        private void Scorerefresh()
-        {
-            panel_grapics.Controls.Clear();
-            Court c = new Court();
-            panel_grapics.Controls.Add(c);
-            c.Teamname_H = H_name;
-            c.Teamname_A = A_name;
-            c.point_H = HS.ToString();
-            c.point_A = AS.ToString();
-        }
-
+        
         private void Button2_Click(object sender, EventArgs e)
         {
             MatchEngine();
