@@ -40,6 +40,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label_error = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -95,7 +96,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(50, 26);
             this.textBox4.TabIndex = 4;
-            this.textBox4.Text = "20";
+            this.textBox4.Text = "30";
             // 
             // button1
             // 
@@ -164,10 +165,23 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Támadás:";
             // 
+            // label_error
+            // 
+            this.label_error.AutoSize = true;
+            this.label_error.Font = new System.Drawing.Font("Bookman Old Style", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label_error.ForeColor = System.Drawing.Color.Red;
+            this.label_error.Location = new System.Drawing.Point(45, 214);
+            this.label_error.Name = "label_error";
+            this.label_error.Size = new System.Drawing.Size(243, 19);
+            this.label_error.TabIndex = 11;
+            this.label_error.Text = "Kérlek csak számot adj meg!";
+            this.label_error.Visible = false;
+            // 
             // Market
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.White;
+            this.Controls.Add(this.label_error);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -203,5 +217,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label_error;
     }
 }

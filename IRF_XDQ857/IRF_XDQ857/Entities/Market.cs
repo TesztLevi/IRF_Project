@@ -57,22 +57,31 @@ namespace IRF_XDQ857.Entities
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            Random r = new Random();           
-          
-            var watch = from a in players
-                         where a.attack > int.Parse(textBox1.Text) && a.defense > int.Parse(textBox2.Text) &&
-                          a.physical > int.Parse(textBox3.Text) && a.prize < int.Parse(textBox4.Text)
+            Random r = new Random();
+            try
+            {
+                var watch = from a in players
+                            where a.attack > int.Parse(textBox1.Text) && a.defense > int.Parse(textBox2.Text) &&
+                             a.physical > int.Parse(textBox3.Text) && a.prize < int.Parse(textBox4.Text)
 
-                        select new
-                         {
-                             Név = a.name,
-                             Támadás = a.attack + r.Next(-3,4),
-                             Védekezés = a.defense + r.Next(-3, 4),
-                             Fizikum = a.physical + r.Next(-3, 4),
-                             Ár = a.prize,
+                            select new
+                            {
+                                Név = a.name,
+                                Támadás = a.attack + r.Next(-3, 4),
+                                Védekezés = a.defense + r.Next(-3, 4),
+                                Fizikum = a.physical + r.Next(-3, 4),
+                                Ár = a.prize,
 
-                         };
-            dataGridView1.DataSource = watch.ToList();
+                            };
+                dataGridView1.DataSource = watch.ToList();
+                label_error.Visible = false;
+            }
+            catch (Exception)
+            {
+                label_error.Visible = true;
+                
+            }
+            
         }
     }
 }

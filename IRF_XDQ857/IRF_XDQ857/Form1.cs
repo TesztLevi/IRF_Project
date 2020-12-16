@@ -87,7 +87,7 @@ namespace IRF_XDQ857
 
                     matchs.Add(match);
 
-                    button_awayteam.Enabled = false;
+                    //button_awayteam.Enabled = false;
                 }
             }
             catch (Exception)

@@ -150,14 +150,54 @@ namespace IRF_XDQ857
 
         public void Button_ready_Click_1(object sender, EventArgs e)
         {
-            Player p1 = (Player)comboBox_P1.SelectedItem;
-            Player p2 = (Player)comboBox_P2.SelectedItem;
-            Player p3 = (Player)comboBox_P3.SelectedItem;
-            Player p4 = (Player)comboBox_P4.SelectedItem;
-            Player p5 = (Player)comboBox_P5.SelectedItem;
+            
             try
             {
+                
+
+                Player p1 = (Player)comboBox_P1.SelectedItem;
+                Player p2 = (Player)comboBox_P2.SelectedItem;
+                Player p3 = (Player)comboBox_P3.SelectedItem;
+                Player p4 = (Player)comboBox_P4.SelectedItem;
+                Player p5 = (Player)comboBox_P5.SelectedItem;
+
                 value = (p1.prize + p2.prize + p3.prize + p4.prize + p5.prize);
+
+                if (textBox_T_name.TextLength > 2 && value <= 100)
+                {
+                    textBox_T_name.Enabled = false;
+
+
+
+                    P1 = p1;
+                    P2 = p2;
+                    P3 = p3;
+                    P4 = p4;
+                    P5 = p5;
+
+                    name = textBox_T_name.Text;
+                    attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack) / 5;
+                    defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense) / 5;
+                    physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical) / 5;
+                    MessageBox.Show("Gratulálunk, készen van a csapatod!");
+                    button_ready.Enabled = false;
+                    ready = true;
+
+                    Enabled();
+                }
+                else if (textBox_T_name.TextLength < 3 && value > 100)
+                {
+                    MessageBox.Show("Kérlek add meg a Csapatod nevét is, és figyelj a költségeidre!");
+                }
+                else if (textBox_T_name.TextLength < 3)
+                {
+                    MessageBox.Show("Kérlek add meg a Csapatod nevét is!");
+                }
+                else if (value > 100)
+                {
+                    MessageBox.Show("Nincs elegendő pénzed!");
+                }
+
             }
             catch (Exception)
             {
@@ -166,40 +206,7 @@ namespace IRF_XDQ857
             }
 
 
-            if (textBox_T_name.TextLength > 2 && value <= 100)
-            {
-                textBox_T_name.Enabled = false;
-
-
-
-                P1 = p1;
-                P2 = p2;
-                P3 = p3;
-                P4 = p4;
-                P5 = p5;
-
-                name = textBox_T_name.Text;
-                attack = (p1.attack + p2.attack + p3.attack + p4.attack + p5.attack) / 5;
-                defense = (p1.defense + p2.defense + p3.defense + p4.defense + p5.defense) / 5;
-                physical = (p1.physical + p2.physical + p3.physical + p4.physical + p5.physical) / 5;
-                MessageBox.Show("Gratulálunk, készen van a csapatod!");
-                button_ready.Enabled = false;
-                ready = true;
-                
-                Enabled();
-            }
-            else if (textBox_T_name.TextLength < 3 && value > 100)
-            {
-                MessageBox.Show("Kérlek add meg a Csapatod nevét is, és figyelj a költségeidre!");
-            }
-            else if (textBox_T_name.TextLength < 3)
-            {
-                MessageBox.Show("Kérlek add meg a Csapatod nevét is!");
-            }
-            else if (value > 100)
-            {
-                MessageBox.Show("Nincs elegendő pénzed!");
-            }
+            
             
             
         }
